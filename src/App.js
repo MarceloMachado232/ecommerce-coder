@@ -1,25 +1,18 @@
-import './styles.css'
-import {NavBar} from './components/NavBar';
+import React from 'react';
+import { NavBar } from './components/NavBar/NavBar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
 
-    <div className="my-app">
+    <>
 
     <NavBar/>
 
-    <h2>Bienvenidos</h2>
+    <ItemListContainer greeting= "Bienvenidos a este Ecommerce"/>
 
-      <section>
-        <p>
-          lorem ipsum
-        </p>
-      </section>
-
-
-
-
-    </div>
+    </>
   );
 }
 

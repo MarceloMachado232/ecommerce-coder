@@ -1,3 +1,6 @@
+import { CartWidget } from '../CartWidget/CartWidget'
+import './NavBar.scss'
+
 export const NavBar = () => {
 
 return (
@@ -21,6 +24,9 @@ return (
   </ul>
 
 </nav>
+
+  <CartWidget/>
+
 
 </div>
 )
