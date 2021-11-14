@@ -1,12 +1,21 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
+import { ProductCard } from '../ProductCard/ProductCard'
+import monster from '../../assets/monsterEnergy.jpg'
 
-export const ItemListContainer = ( {greeting} ) => {
+
+
+export const ItemListContainer = () => {
     return (
+    <div>
         <Container>
             <hr/>
-            <h2>{greeting}</h2>
+            <h2>Bienvenido al ECOMMERCE</h2>
             <hr/>
+            <ProductCard img={monster} name="Monster Energy ULTRA"/>
+
         </Container>
+        
+    </div>
     )
 }
