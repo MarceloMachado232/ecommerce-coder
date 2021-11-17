@@ -1,21 +1,46 @@
-import React from 'react'
-import { Container } from 'react-bootstrap'
-import { ProductCard } from '../ProductCard/ProductCard'
-import monster from '../../assets/monsterEnergy.jpg'
-
+import React, { useEffect, useState } from 'react'
+import { pedirDatos } from '../../helpers/pedirDatos'
+import { ItemList } from '../ItemList/ItemList'
 
 
 export const ItemListContainer = () => {
+    
+    const [loading, setLoading] = useState(true)
+    const [productos, setProductos] = useState([])
+
+    useEffect(() => {
+        
+        setLoading(true)
+        pedirDatos()
+            .then( (resp) => {
+                setProductos(resp)
+            })
+            .catch( (error) => {
+                console.log(error)
+            })
+            .finally( () => {
+                setLoading(false)
+            })
+    }, [])
+
+    
     return (
-    <div>
-        <Container>
+    <>
+        <div>
             <hr/>
             <h2>Bienvenido al ECOMMERCE</h2>
             <hr/>
-            <ProductCard img={monster} name="Monster Energy ULTRA"/>
+        </div>     
 
-        </Container>
+        {
+            loading 
+                 ? <h2>Cargando....</h2> 
+                 : <ItemList productos = {productos}/>
+        }
+
+
+     
         
-    </div>
+    </>
     )
 }
