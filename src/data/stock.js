@@ -6,6 +6,7 @@ export const stock = [
         desc: "Lorem Ipsum",
         img: "https://www.bobdistribuciones.com.ar/database/articulos/fotos/1150/MONSTER%20ENERGY%20DRINK_500cc_1.jpg",
         category: 'nacional',
+        stock: 20,
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ export const stock = [
         desc: "Lorem Ipsum",
         img: "https://www.casa-segal.com/wp-content/uploads/2020/03/monster-energy-473ml-ultra-almacen-gaseosas-casa-segal-mendoza-600x600.jpg",
         category: 'nacional',
+        stock: 20,
     },
     {
         id: 3,
@@ -22,6 +24,7 @@ export const stock = [
         desc: "Lorem Ipsum",
         img: "http://d3ugyf2ht6aenh.cloudfront.net/stores/861/458/products/341221-e6e656437d9a45dfb516063901512961-640-0.png",
         category: 'nacional',
+        stock: 20,
     },
     {
         id: 4,
@@ -30,6 +33,7 @@ export const stock = [
         desc: "Lorem Ipsum",
         img: "https://selvastoreuk.com/wp-content/uploads/2020/08/5060639123025.jpg",
         category: 'importado',
+        stock: 20,
     },
     {
         id: 5,
@@ -38,6 +42,7 @@ export const stock = [
         desc: "Lorem Ipsum",
         img: "https://carolino.es/wp-content/uploads/2021/07/CAROLINO-JPG-10.jpg",
         category: 'importado',
+        stock: 20,
     },
     {
         id: 6,
@@ -46,5 +51,6 @@ export const stock = [
         desc: "Lorem Ipsum",
         img: "https://s3-eu-west-1.amazonaws.com/glencrest/i/pmi/15111_main.jpg?_t=21311936",
         category: 'importado',
+        stock: 20,
     }
 ]
