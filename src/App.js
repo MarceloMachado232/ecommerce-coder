@@ -5,31 +5,35 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { CartView } from './components/CartView/CartView';
+import { CartProvider } from './context/CartContext';
+import { DarkModeProvider } from './context/DarkModeContext';
 
 
 
 function App() {
 
+
+
+
   return (
 
-    
-    <BrowserRouter>
+  <DarkModeProvider>
+    <CartProvider>
 
-    <NavBar/>
-   
+      <BrowserRouter>
+          <NavBar/>
+          <Routes>  
+            <Route path="/" element={ <ItemListContainer/> }/>
+            <Route path="/producto/:catId" element={ <ItemListContainer/> }/>
+            <Route path="/detail/:itemId" element={ <ItemDetailContainer/> }/>
+            <Route path="/cart" element={ <CartView/> }/>
+            <Route path="*" element={ <Navigate to="/"/> }/>
+          </Routes> 
+      </BrowserRouter>
 
-     <Routes>
-      
-        <Route path="/" element={ <ItemListContainer/> }/>
-        <Route path="/producto/:catId" element={ <ItemListContainer/> }/>
-        <Route path="/detail/:itemId" element={ <ItemDetailContainer/> }/>
-        <Route path="/cart" element={ <CartView/> }/>
-        <Route path="*" element={ <Navigate to="/"/> }/>
-
-      </Routes> 
-
-    </BrowserRouter>
-    
+    </CartProvider>
+  </DarkModeProvider>
+  
   );
 }
 
