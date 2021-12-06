@@ -23,7 +23,7 @@ return (
 
 </nav>
 
-<Link to="/cart"> <CartWidget/> </Link>
+<CartWidget/>
   
 
 
