@@ -7,6 +7,7 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { CartView } from './components/CartView/CartView';
 import { CartProvider } from './context/CartContext';
 import { DarkModeProvider } from './context/DarkModeContext';
+import { Checkout } from './components/Checkout/Checkout';
 
 
 
@@ -27,6 +28,7 @@ function App() {
             <Route path="/producto/:catId" element={ <ItemListContainer/> }/>
             <Route path="/detail/:itemId" element={ <ItemDetailContainer/> }/>
             <Route path="/cart" element={ <CartView/> }/>
+            <Route path="/checkout" element={ <Checkout/> }/>
             <Route path="*" element={ <Navigate to="/"/> }/>
           </Routes> 
       </BrowserRouter>
