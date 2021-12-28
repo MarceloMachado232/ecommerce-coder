@@ -5,7 +5,6 @@ import { Loader } from '../Loader/Loader'
 import { collection, getDocs, query, where } from 'firebase/firestore/lite'
 import { db } from '../../firebase/config'
 
-
 export const ItemListContainer = () => {
     
     const [loading, setLoading] = useState(false)

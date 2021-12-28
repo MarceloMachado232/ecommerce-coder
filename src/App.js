@@ -8,7 +8,7 @@ import { CartView } from './components/CartView/CartView';
 import { CartProvider } from './context/CartContext';
 import { DarkModeProvider } from './context/DarkModeContext';
 import { Checkout } from './components/Checkout/Checkout';
-
+import './App.scss'
 
 
 function App() {
@@ -17,10 +17,10 @@ function App() {
 
 
   return (
-
+<div className="body">
   <DarkModeProvider>
     <CartProvider>
-
+      
       <BrowserRouter>
           <NavBar/>
           <Routes>  
@@ -32,10 +32,10 @@ function App() {
             <Route path="*" element={ <Navigate to="/"/> }/>
           </Routes> 
       </BrowserRouter>
-
+      
     </CartProvider>
   </DarkModeProvider>
-  
+  </div>
   );
 }
 
